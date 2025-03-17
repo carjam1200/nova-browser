@@ -1,0 +1,36 @@
+{
+  "name": "nova-browser",
+  "version": "1.0.0",
+  "description": "A modern web browser built with React and Electron",
+  "main": "electron.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win",
+    "publish": "electron-builder build --win -p always"
+  },
+  "build": {
+    "appId": "com.nova.browser",
+    "productName": "Nova Browser",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "carjam1200",
+      "repo": "nova-browser"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
